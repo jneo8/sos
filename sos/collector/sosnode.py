@@ -17,6 +17,7 @@ import re
 from pipes import quote
 from sos.policies import load
 from sos.policies.init_systems import InitSystem
+from sos.collector.transports.juju import JujuSSH
 from sos.collector.transports.control_persist import SSHControlPersist
 from sos.collector.transports.local import LocalTransport
 from sos.collector.transports.oc import OCTransport
@@ -31,7 +32,8 @@ TRANSPORTS = {
     'local': LocalTransport,
     'control_persist': SSHControlPersist,
     'oc': OCTransport,
-    'saltstack': SaltStackMaster
+    'saltstack': SaltStackMaster,
+    'juju': JujuSSH,
 }
 
 
